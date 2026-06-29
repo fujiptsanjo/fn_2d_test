@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden">
+    <a-scene embedded arjs vr-mode-ui="enabled: false">
+      <a-assets>
+        <a-asset-item id="fn_tc1" src="fn_tc1.glb"></a-asset-item>
+      </a-assets>
+      
+      <a-marker type="pattern" url="pattern-fn_mkr.patt">
+		  <a-image width="5" position="0 0 0" rotation="0 0 0" src="fn_2d.png"></a-image>
+      </a-marker>
+      
+      <a-entity camera position="0 0 3"></a-entity>
+    </a-scene>
+  </body>
+  <script>
+      document.querySelector("a-scene").renderer.gammaOutput=true;
+  </script>
+</html>
